@@ -7,7 +7,7 @@ openssl genrsa -out private.pem 2048
 # -key 指定私钥文件
 openssl req -new -key private.pem -out cert.req
 
-# 会自动生成2018位的rsa私钥
+# 会自动生成2048位的rsa私钥
 openssl req -new -out cert.req
 
 # x509 证书格式
