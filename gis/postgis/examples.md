@@ -9,3 +9,7 @@ update table set geom_coll = (select ST_Polygonize(geom_mpg) from table);
 -- ST_GeometryN去第n个
 update table set geom_pg = ST_GeometryN(geom_coll, gid);
 ```
+- 坐标转换/投影
+```sql
+select st_asewkt(st_transform(st_geomfromtext('point (116 39)', 4326), 900913)) geom;
+```
